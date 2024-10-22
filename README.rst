@@ -92,6 +92,7 @@ Usage Example
 =============
 
 .. code-block:: python
+
     import time
     import board
     from adafruit_ina3221 import INA3221

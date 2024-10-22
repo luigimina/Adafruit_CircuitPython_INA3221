@@ -4,6 +4,7 @@
 """
 `adafruit_ina3221`
 ================================================================================
+
 CircuitPython driver for the INA3221 Triple 0-26 VDC, ±3.2 Amp Power Monitor
 
 * Author(s): Liz Clark
@@ -12,13 +13,14 @@ Implementation Notes
 --------------------
 
 **Hardware:**
+
 * `Adafruit INA3221 - Triple 0-26 VDC, ±3.2 Amp Power Monitor <https://www.adafruit.com/product/6062>`_"
 
 **Software and Dependencies:**
+
 * Adafruit CircuitPython firmware for the supported boards:
   https://circuitpython.org/downloads
 * Adafruit's Bus Device library: https://github.com/adafruit/Adafruit_CircuitPython_BusDevice
-
 """
 
 import time
