@@ -30,7 +30,6 @@ This driver depends on:
 
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
 * `Bus Device <https://github.com/adafruit/Adafruit_CircuitPython_BusDevice>`_
-* `Register <https://github.com/adafruit/Adafruit_CircuitPython_Register>`_
 
 Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
@@ -38,19 +37,10 @@ This is easily achieved by downloading
 or individual libraries can be installed using
 `circup <https://github.com/adafruit/circup>`_.
 
-
-
-.. todo:: Describe the Adafruit product this library works with. For PCBs, you can also add the
-image from the assets folder in the PCB's GitHub repo.
-
 `Purchase one from the Adafruit shop <http://www.adafruit.com/products/6062>`_
 
 Installing from PyPI
 =====================
-.. note:: This library is not available on PyPI yet. Install documentation is included
-   as a standard element. Stay tuned for PyPI availability!
-
-.. todo:: Remove the above note if PyPI version is/will be available at time of release.
 
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
 PyPI <https://pypi.org/project/adafruit-circuitpython-ina3221/>`_.
@@ -101,8 +91,25 @@ Or the following command to update an existing version:
 Usage Example
 =============
 
-.. todo:: Add a quick, simple example. It and other examples should live in the
-examples folder and be included in docs/examples.rst.
+.. code-block:: python
+    import time
+    import board
+    from adafruit_ina3221 import INA3221
+
+    i2c = board.I2C()
+    ina = INA3221(i2c)
+
+    while True:
+        for i in range(3):
+            bus_voltage = ina[i].bus_voltage
+            shunt_voltage = ina[i].shunt_voltage
+            current = ina[i].current_amps * 1000
+            print(f"Channel {i + 1}:")
+            print(f"  Bus Voltage: {bus_voltage:.6f} V")
+            print(f"  Shunt Voltage: {shunt_voltage:.6f} V")
+            print(f"  Current: {current:.6f} mA")
+            print("-" * 30)
+        time.sleep(2)
 
 Documentation
 =============

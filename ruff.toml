@@ -41,7 +41,6 @@ extend-select = [
   "PLE2513",  # invalid-character-esc
   "PLE2514",  # invalid-character-nul
   "PLE2515",  # invalid-character-zero-width-space
-  "PLR0124",  # comparison-with-itself
   "PLR0202",  # no-classmethod-decorator
   "PLR0203",  # no-staticmethod-decorator
   "UP004",  # useless-object-inheritance
@@ -92,7 +91,7 @@ ignore = [
     "PLR2004", # magic-value-comparison
     "UP030", # format literals
     "PLW1514",  # unspecified-encoding
-
+    "PLR0124",  # comparison-with-itself
 ]
 
 [format]

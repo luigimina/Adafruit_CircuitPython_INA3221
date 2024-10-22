@@ -24,14 +24,12 @@ Table of Contents
 .. toctree::
     :caption: Tutorials
 
-.. todo:: Add any Learn guide links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    Adafruit INA3221 Breakout Learn Guide <https://learn.adafruit.com/adafruit-ina3221-breakout>
 
 .. toctree::
     :caption: Related Products
 
-.. todo:: Add any product links here. If there are none, then simply delete this todo and leave
-    the toctree above for use later.
+    Adafruit INA3221 - Triple 0-26 VDC, ±3.2 Amp Power Monitor - STEMMA QT / Qwiic <https://www.adafruit.com/product/6062>
 
 .. toctree::
     :caption: Other Links

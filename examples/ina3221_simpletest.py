@@ -2,16 +2,15 @@
 #
 # SPDX-License-Identifier: MIT
 import time
+
 import board
-import busio
+
 from adafruit_ina3221 import INA3221
 
-# Set up I2C and INA3221
-i2c = busio.I2C(board.SCL, board.SDA)
+i2c = board.I2C()
 ina = INA3221(i2c)
 
 while True:
-    # Loop through the 3 channels and read bus voltage and current
     for i in range(3):
         bus_voltage = ina[i].bus_voltage
         shunt_voltage = ina[i].shunt_voltage
@@ -23,5 +22,4 @@ while True:
         print(f"  Current: {current:.6f} mA")
         print("-" * 30)
 
-    # Wait 2 seconds before reading again
     time.sleep(2)
