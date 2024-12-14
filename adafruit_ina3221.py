@@ -202,7 +202,7 @@ class INA3221:
             address (int, optional): The I2C address of the INA3221. Defaults to DEFAULT_ADDRESS.
         """
         self.i2c_dev = I2CDevice(i2c, address)
-        self._shunt_resistance: List[float] = [0.05, 0.05, 0.05]  # Default shunt resistances
+        self._shunt_resistance: List[float] = [0.1, 0.1, 0.1] #[0.05, 0.05, 0.05]  # Default shunt resistances
         self.reset()
 
         self.channels: List[INA3221Channel] = [INA3221Channel(self, i) for i in range(3)]
